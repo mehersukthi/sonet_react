@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+
+
+    <script>
+        function first(){
+            var c = document.getElementById('drop').value;
+        document.getElementById('cameras').style.backgroundColor=c;
+        document.getElementById('palm').style.backgroundColor=c;
+        document.getElementById('m').style.backgroundColor=c;
+        if(c=="purple"){
+            document.getElementById('palm').style.color= white;
+        }
+
+        }
+        
+    </script>
+</head>
+
+<body >
+    
+    <div class="container bg-secondary " id="chan">
+    
+        <h1 class="bg-warning text-primary text-align-center">DUBAI DIARIES</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <select id="drop" onchange="first()">
+                <option>purple</option>
+                <option>white</option>
+            </select>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#mynavbar"> 
+            
+           <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="mynavbar"> 
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                         <a href="#" class="nav-link">  Home </a>  </li>
+                    <li class="nav-item">
+                         <a href="#" class="nav-link">  Products </a> </li>
+                    <li class="nav-item"> 
+                        <a href="#" class="nav-link">  About Us </a> </li>
+                    <li class="nav-item"> 
+                        <a href="#contact" class="nav-link">  Contact Us </a> </li>
+                </ul>
+            </div>
+    
+        </nav>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+              <a href="#cameras">   <img class="img-thumbnail" src="burjkhalifa.jpg"> </a> 
+              <p>BURJ KHALIFA</p>
+            </div>
+            <div class="col-sm-4">
+                <a href="#al"><img class="img-thumbnail" src="al majaj.jpg"></a>
+                <p>AL MAJAZ</p>
+            </div>
+            <div class="col-sm-4">
+                <a href="#palm"><img class="img-thumbnail" src="atlantis.jpg"></a>
+                <p>PALM ATLANTIS</p>
+            </div>
+        </div> 
+    
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="#d"><img class="img-thumbnail" src="dubai-w.jpg"></a>
+                <p>TOP VIEW</p>
+            </div>
+            <div class="col-sm-6">
+                <a href="#m"><img class="img-thumbnail" src="ali-raoufian--LiPS85csDM-unsplash.jpg"></a>
+                <p>DUBAI MIRACLE GARDEN</p>
+            </div>
+            
+        </div> 
+    
+        <div class="row" id="cameras">
+            <div class="col-sm-12"> 
+               <p class="bg-dark text-primary"> BURJ KHALIFA</p>
+               
+                Construction of the Burj Khalifa began in 2004, with the exterior completed five years later in 2009. The primary structure is reinforced concrete. The building was opened in 2010 as part of a new development called Downtown Dubai. It is designed to be the centrepiece of large-scale, mixed-use development. The decision to construct the building is based on the government's decision to diversify from an oil-based economy, and for Dubai to gain international recognition. The building was originally named Burj Dubai but was renamed in honour of the ruler of Abu Dhabi and president of the United Arab Emirates, Khalifa bin Zayed Al Nahyan;[5] Abu Dhabi and the UAE government lent Dubai money to pay its debts. The building broke numerous height records, including its designation as the tallest building in the world.
+            </div>
+        </div>
+        <div class="row" id="al">
+            <div class="col-sm-12">
+               <p class="bg-dark text-info"> AL MAJAZ</p>
+                Charming Al Majaz is the location of a namesake park, which is popular for cruises around Khalid Lake on traditional wooden boats, a Dancing Fountain show, and a waterfront promenade. Al Noor Island has an outdoor sculpture trail and a Butterfly House with over 20 colorful species, while stately, Ottoman-style Al Noor Mosque is open for tours. Dining options in the area include Lebanese cafes and burger bars.
+            </div>
+        </div>
+        <div class="row" id="palm">
+            <div class="col-sm-12">
+               <p class="bg-dark text-success"> PALM ATLANTIS</p>
+               Atlantis The Palm, Dubai is a luxury hotel resort located at the apex of the Palm Jumeirah in the United Arab Emirates. It was the first resort to be built on the island and is themed on the myth of Atlantis but includes distinct Arabian elements. The resort opened on September 24, 2008 as a joint venture between Kerzner International Holdings Limited and Istithmar.
+            </div>
+        </div>
+        <div class="row" id="d">
+            <div class="col-sm-12">
+               <p class="bg-dark text-danger"> TOP VIEW</p>
+               Burj Khalifa is surrounded by an 11 ha (27-acre) park designed by landscape architects SWA Group.[81] Like the tower, the park's design was based on the flower of the Hymenocallis, a desert plant. At the centre of the park is the water room, which is a series of pools and water jet fountains. Benches and signs incorporate images of Burj Khalifa and the Hymenocallis flower.[83]
+
+     The plants are watered by water collected from the building's cooling system. The system provides 68,000,000 L (15,000,000 imp gal) annually.[83] WET Enterprises, who also developed the Dubai Fountain, developed the park's six water features.
+            </div>
+        </div>
+        <div class="row" id="m">
+            <div class="col-sm-12">
+               <p class="bg-dark text-light"> DUBAI MIRACLE GARDEN</p>
+               The Dubai Miracle Garden (In Arabic: حديقة الزهور بدبي) is a flower garden located in the district of Dubailand, Dubai, United Arab Emirates. The garden was launched on Valentine's Day in 2013.[1] The garden occupies over 72,000 square metres (780,000 sq ft), making it the world's largest natural flower garden featuring over 50 million flowers and 250 million plants.[2][3]
+
+        In April 2015, the garden was awarded the Moselle Award for New Garden Experiences of the year by the Garden Tourism Award 2015.[4]
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container bg-light">
+        <h3 class="text-primary" id="contact">CONTACT US</h3>
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text"class="form-control" id="name" placeholder="Enter your name">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="enteremail">Email</label>
+            <input type="email" class="form-control" id="enteremail" placeholder="name@gmail.com">
+        </div>
+
+        <div class="form-group">
+            <label for="query">Enter your query</label>
+            <textarea class="form-control" id="enteremail" rows="4"></textarea>
+        </div>
+        <button class="btn btn-success" type="submit" value="submit" onclick="send()">SUBMIT</button>
+    </div>
+</body>
+</html>

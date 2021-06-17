@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on select</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
+
+    <script>        
+        //hyd
+        function my(){
+            var x= document.getElementById("myselect").value;
+            console.log(x);
+            var request= new XMLHttpRequest();
+            request.open("GET","https://api.openweathermap.org/data/2.5/weather?q="+x+"&appid=93f26e3c57081a6210de53b8dcfdfea4",true);
+            request.onload = function(){
+            if(request.status>=200 && request.status<400){
+                var data =JSON.parse(request.responseText);
+                console.log(data);
+                document.getElementById('hyd').innerHTML = data.name;
+                document.getElementById('tempa').innerText = data.main.temp;
+                document.getElementById('desc').innerHTML = data.weather[0].description;
+                var icon = data.weather[0].icon+".png";
+                document.getElementById('myimg').src = "https://openweathermap.org/img/w/"+icon ;
+                
+                
+            }
+            else{
+                console.log("error");
+            }
+
+        };
+        request.onerror = function(){
+            console.log("connection error");
+        };
+        request.send();
+    }   
+        </script>
+</head>
+<body>
+        <h2 c;ass="text-align-center"> WEATHER </h2>
+       <select id="myselect" onchange="my()">
+           
+           <option>Delhi</option>
+           <option>hyderabad</option>
+           <option>secunderabad</option>
+           <option>Abu dhabi</option>
+           <option> Dubai</option>
+           <option>New york</option>
+           <option>paris</option>
+          
+          
+       </select>
+       <div class="container bg-info text-align-center" >
+        <span> PLACE       : <p id="hyd"></p> </span>
+       TEMPARATURE : <p id="tempa"></p>
+       DESCRIPTION : <p id="desc"></p>
+       <p>
+        <img id="myimg" src="img.png" alt="weatherdesc"> 
+    </p>
+       </div>
+</body>
+</body>
+</html>
